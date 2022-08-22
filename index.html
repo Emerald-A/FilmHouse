@@ -1,0 +1,316 @@
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>See What's On. Book Movies. Filmhouse Cinemas</title>
+
+     <!-- Styling -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+     <link rel="stylesheet" href="Package/CSS/style.css">
+     <link rel="icon" type="image/x-icon" href="./Package/Images/favicon.ico">
+
+     <!-- Bootstrap Icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+</head>
+
+<body onscroll="addBgColor()">
+     <nav id="navBar">
+          <!-- <div class="navContainers fhcLogo"><img src="Package/Images/fhclogo.svg" alt="" srcset=""><span> filmhouse </span></div> -->
+          <div class="navContainers"><img src="./Package/Images/FHC-LOGO.png" width="150px" height="100px" alt=""></div>
+          <div class="navContainers res">
+               <a href="#a-movieList">
+                    <button class="btn btn-lg"> Get Tickets </button>
+               </a>
+              
+               <a href="subscription.html">
+               <button class="btn btn-lg"> <span class="bi bi-star-fill"></span> Subscribe Now </button>
+               </a>
+               <button class="btn btn-lg"> Food and Drinks </button>
+               
+               <a href="subscription.html">
+                    <button class="btn btn-lg"> Bookings </button>
+                    </a>
+              
+          </div>
+          <div class="navContainers">
+               <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-lg"> <span class="bi bi-person-fill"></span> Sign In </button>
+               <button class="btn btn-lg"> <span class="bi bi-cart-fill"></span> Cart </button>
+               <button class=" bi bi-search btn btn-lg"></button>
+          </div>
+     </nav>
+
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+     Launch demo modal
+   </button> -->
+   
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header" style="max-height:50px;">
+          <h5 class="modal-title" id="exampleModalLabel"> 
+               <div class=""><img src="./Package/Images/FHC-LOGO.png" width="150px" height="100px" alt=""></div>
+           </h5>
+           
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+          <div class="account-page">
+               <div class="container">
+               
+           
+                   <div class="">
+                     <div class="form-container">
+                       <div class="form-btn">
+                         <span onclick="login()"> Login</span>
+                         <span onclick="register()"> Register</span>
+                         <hr id="indicator">
+                       </div>
+           
+                       <form id="LoginForm">
+                         <input id="u_name" type="text" placeholder="Username">
+                         <input id="pword" type="password" placeholder="password">
+                         <button id="login" type="submit" class="bton"> Login </button>
+                         <a href=""> Forgot password</a>
+                       </form>
+           
+                       <form id="RegForm">
+                         <input id="username" type="text" placeholder="Username">
+                         <p id="wrong" style="display: none;">wrong</p>
+                         <input id="email" type="email" placeholder="Email">
+                         <input id="password" type="password" placeholder="password">
+                         <button id="signup" type="submit" class="bton"> Register </button>
+                       </form>
+           
+                     </div>
+               
+                 </div>
+               </div>
+             </div>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+   
+     <div class="page1">
+          <h1>
+               <!-- <span><img src="Package/Images/fhclogo.svg" alt="" srcset=""></span>
+               film<span class="textSeperation">house</span><br> -->
+               <!-- <span><img src="./Package/Images/FHC-LOGO.png" width="600px" height="400px" alt=""></span> <br> -->
+              <p id="movie_name"> THOR : LOVE AND THUNDER </p>
+               <span><h6 class="otherText" id="dem"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis voluptatum distinctio aperiam ad, laboriosam doloribus repellat possimus veritatis molestiae, error pariatur eos quod. Nostrum adipisci quia cumque! Ad, eum corporis! </span></h6><br>
+               <button class="btn btn-primary">Buy Ticket</button>
+          </h1><br>    
+     </div>
+     <div class="page2">
+         <div class="searchContainer">
+               <h1> <span class="bi bi-camera-video"></span> CURRENTLY SHOWING</h1>
+               <div class="searchFilter">
+                    <h4> 
+                         CHOOSE WHERE YOU WANT TO WATCH FROM
+                    </h4><br>
+                    <span id="pick">
+                         <select name="" id="state">
+                              <option value="">State</option>
+                              <option value="Lagos">Lagos</option>
+                              <option value="Oyo">Oyo</option>
+                              <option value="Edo">Edo</option>
+                              <option value="Kano">Kano</option>
+                              <option value="Rivers">Rivers</option>
+                              <option value="Ondo">Ondo</option>
+                         </select>
+                         <select name="" id="state">
+                              <option value="">Location</option>
+                              <option value="Lagos">Lagos</option>
+                              <option value="Oyo">Oyo</option>
+                              <option value="Edo">Edo</option>
+                              <option value="Kano">Kano</option>
+                              <option value="Rivers">Rivers</option>
+                              <option value="Ondo">Ondo</option>
+                         </select>
+                         <select name="" id="state" class="st1">
+                              <option value="">Date</option>
+                              <option value="Lagos">Lagos</option>
+                              <option value="Oyo">Oyo</option>
+                              <option value="Edo">Edo</option>
+                              <option value="Kano">Kano</option>
+                              <option value="Rivers">Rivers</option>
+                              <option value="Ondo">Ondo</option>
+                         </select>
+                    </span>
+               </div>
+         </div> 
+
+
+         <div id="mod" class="overly">
+          <div id="modl">
+               <div class="iframe-com">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/4jNBbzK0RX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+               <!-- <button style="padding-top:20px;" id="close"> YES</button> -->
+            <button id="open"> CLOSE</button>
+          </div>
+      </div>
+
+      <!-- <button>hi there</button> -->
+
+         <div class="movieList" id="a-movieList">
+          <div class="movie">
+               <div class="coverPic">
+                    <img src="Package/Images/theSetup.jpg"  id="id-s" alt="" srcset="" class="coverImg">
+               </div>
+               <div class="movieInfo">
+                    <h1>THE SETUP 2</h1>
+                    <span>DRAMA, ACTION</span>
+                    <p>Four years later Chike has barely come to terms with her life as a US Government Agent when she is forced to risk everything she holds dear once again after an international Terrorist kidnaps Grace&rs...</p>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+               </div>
+          </div>
+          <div class="movie">
+               <div class="coverPic">
+                    <img src="Package/Images/bullet train.jpg" alt="" srcset="" class="coverImg">
+               </div>
+               <div class="movieInfo">
+                    <h1>BULLET TRAIN</h1>
+                    <span>DRAMA, ACTION</span>
+                    <P>
+                         Ladybug is an unlucky assassin who's determined to do his job peacefully after one too many gigs has gone off the rails. Fate, however, may have other plans as his latest mission puts him on a collision course with lethal adversaries from around the globe
+                    </P>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+               </div>
+          </div>
+          <div class="movie">
+               <div class="coverPic">
+                    <img src="Package/Images/PREY.jpg" alt="" srcset="" class="coverImg">
+               </div>
+               <div class="movieInfo">
+                    <h1>PREY</h1>
+                    <span>DRAMA, ACTION</span>
+                    <P>
+                         A skilled Comanche warrior protects her tribe from a highly evolved alien predator that hunts humans for sport, fighting against wilderness, dangerous colonisers and this mysterious creature to keep her people safe.
+                    </P>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+               </div>
+          </div>
+          <div class="movie">
+               <div class="coverPic">
+                    <img src="Package/Images/Top_Gun.jpg" alt="" srcset="" class="coverImg">
+               </div>
+               <div class="movieInfo">
+                    <h1>TOP GUN: MAVERICK </h1>
+                    <span>DRAMA, ACTION</span>
+                    <P>
+                         After more than 30 years of service as one of the Navy's top aviators, Pete "Maverick" Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.
+                    </P>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+                    <button class="btn btn-md timeSelection">10:20am</button>
+
+               </div>
+          </div>
+         </div>
+     </div>
+     <div class="reservations">
+          <div class="bookingsInfo">
+               <h1> Bookings and Reservations Only </h1>
+               <p> Have a private experience with your friends, family or even colleagues. Rent out one of our spaces for your birthdays, events and premieres </p>
+          </div>
+          <div>
+               <button class="btn btn-lg">CONTACT US NOW</button>
+          </div>
+     </div>
+     <footer>
+          <div class="navContainers fhcLogo"><img src="Package/Images/fhclogo.svg" alt="" srcset=""><span> filmhouse </span></div>
+          <div>
+               <ul>
+                    <li> <h6> COMPANY </h6> </li>
+                    <li> About Us </li>
+                    <li> Cinemas </li>
+                    <li> Tickets Prices</li>
+                    <li> Experiences </li>
+               </ul>
+          </div>
+          <div>
+               <ul>
+                    <li> <h6> TERMS </h6> </li>
+                    <li> General </li>
+                    <li> Ticket Sales & Online Bookings </li>
+                    <li> Filmhouse+</li>
+               </ul>
+          </div>
+          <div>
+               <ul>
+                    <li> <h6> CONTACT </h6> </li>
+                    <li> Self Help </li>
+                    <li> Contact Us</li>
+                    <li> Advertise with Us </li>
+                     <br>
+                    <li> <h6> LEGAL </h6> </li>
+                    <li> Privacy Policy </li>
+               </ul>
+          </div>
+          <div>
+               <ul>
+                    <li> <h6> DOWNLOAD OUR APP </h6> </li>
+                    <li> Self Help </li>
+                    <li> Contact Us</li>
+                     <br>
+                    <li> <h6> WATCH FILM HOUSE ON </h6> </li>
+                    <li>
+                         <h2 class="bi bi-pc-display-horizontal"></h2>
+                         <h2 class="bi bi-laptop"></h2>
+                         <h2 class="bi bi-tablet"></h2>
+                         <h2 class="bi bi-phone"></h2>
+                         <h2 class="bi bi-wifi"></h2>
+                    </li>
+               </ul>
+          </div>
+          <div>
+               <ul>
+                    <li> <h6> FOLLOW US ON </h6> </li>
+                    <br>
+                    <li>
+                         <h2 class="bi bi-facebook"></h2>
+                         <h2 class="bi bi-twitter"></h2>
+                         <h2 class="bi bi-instagram"></h2>
+                    </li>
+                    <br>
+                    <li> <h6> PAYMENT METHOD </h6> </li>
+                    <li>
+                         <h2 class="bi bi-paypal"></h2>
+                         <h2 class="bi bi-credit-card"></h2>
+                         
+                    </li>
+               </ul>
+          </div>
+     </footer>
+     <script src="Package/JS/script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

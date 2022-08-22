@@ -1,0 +1,165 @@
+@import url(style.css);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+     font-family: "Avenir Next Bold";
+     src: url(../Fonts/AvenirNextLTPro-Bold.otf);
+}
+
+@font-face {
+     font-family: "Avenir Next Normal";
+     src: url(../Fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@media only screen and (max-width: 600px) {
+     .res {
+       display: none;
+     }
+   }
+
+.subnavBar{
+     margin-bottom: 4% !important;
+     border: 1px solid red !important;
+     position: relative;
+     z-index: 100;
+     display: flex;
+}
+
+.subpage1{
+     margin-top: 5%;
+     width: 76%;
+     height: 80%;
+     padding: 5%;
+     border: 1px solid red;
+     text-align: center;
+}
+
+.subpage1 h1{
+     font-family: "Avenir Next Bold";
+     color: var(--txtColor);
+     font-weight: 900;
+     font-style: normal ;
+     font-size: 56px;
+     
+}
+
+.navbar .btn{
+     font-family: "Avenir Next Normal" !important;
+     color: var(--txtColor);
+}
+
+.subpageContent{
+     width: 70%;
+
+}
+
+.mainContent{
+     width: 100%;
+     min-height: 30%;
+     margin-top: 5%;
+     padding-left: 10%;
+}
+
+.mainContent .subContent1{
+     /* display: flex; */
+     justify-content: space-around;
+     padding: 2%;
+     width: 100%;
+}
+
+.mainContent .subContent1 h1{
+     font-family: "Avenir Next Bold";
+     color: var(--txtColor);
+     font-weight: 900;
+     font-style: normal ;
+     font-size: 56px;
+     width: 55%;
+     text-align: left;
+}
+
+.mainContent .subContent1 span{
+     color: #60CED1;
+     font-weight: 700;
+     font-size: 13px;
+}
+
+.mainContent .subContent1 h4{
+     font-family: "Avenir Next Bold";
+     color: var(--txtColor);
+     font-weight: 900;
+     font-style: normal ;
+     font-size: 35px;
+     width: 50%;
+     text-align: left;
+}
+
+.bgBlack{
+     background: black !important;
+     /* height: 100px; */
+}
+.plans{
+     width: 100%;
+     height: 70%;
+     display: flex;
+     margin-bottom: 2%;
+     border-top: 0.5px solid grey;
+}
+
+.planImage{
+     padding: 1%;
+     height: 100%;
+}
+.imgimg{
+     height: 100%;
+}
+.plans .planInfo{
+     padding: 2%;
+     width: 40%;
+     margin: 2%;
+}
+
+.plans .planInfo .planStyle{
+     font-family: "Avenir Next Normal";
+     font-size: 20px;
+     font-weight: 900;
+     width: 5%;
+     background: #131315;
+     /* color: white; */
+     padding: 3%;
+     border-radius: 15px;
+     letter-spacing: 3px;
+}
+.plans .planInfo h3{
+     font-size: 30px;
+     color: var(--txtColor);
+}
+
+.plans .planInfo p{
+     font-size: 22px;
+}
+
+.price{
+     font-family: 'Bebas Neue', cursive;
+     font-size: 55px;
+     color: white;
+}
+.planInfo .btn-lg{
+     letter-spacing: 6px;
+     font-size: 15px;
+     color: white;
+     border-radius: 18px !important;
+     height: 40px;
+     padding: 2%;
+     padding-bottom: 7%;
+     font-weight: 800;
+}
+
+.with-linear-gradient {
+     border-style: solid !important;
+     border-width: 4px !important;
+     border-image: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89)) 1 !important;
+   }
+
+footer{
+     border-top: 1px solid grey;
+}
